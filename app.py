@@ -642,6 +642,8 @@ def get_all_campaigns_for_admin(current_admin):
 
     finally:
         conn.close()
+
+        
 @app.route('/api/admins/campaigns/<int:campaign_id>', methods=['GET'])
 @token_required(role="admin")
 def get_campaign_detail_for_admin(current_admin, campaign_id):
